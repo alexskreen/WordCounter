@@ -24,8 +24,14 @@
         public void SentenceToArr_ArrayifySentence_ReturnLength()
         {
             UserInput testUserInput = new UserInput("cat", "cats are awesome");
-            Assert.AreEqual(3, testUserInput.SentenceToArr("cats are awesome"));
+            Assert.AreEqual(3, testUserInput.SentenceToArr());
+        }
 
+        [TestMethod]
+        public void CompareWord_CompareUserWordToString_ReturnOccurence()
+        {
+            UserInput testUserInput = new UserInput("cat", "my cat is the best cat");
+            Assert.AreEqual(2, testUserInput.SentenceToArr());
         }
     } 
  }

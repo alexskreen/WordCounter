@@ -8,20 +8,20 @@ namespace WordCounter.Models
 {
     public class UserInput
     {
-      public string Word { get; set; }
+      public string UserWord { get; set; }
       public string Sentence { get; set; }
       public int occurance { get; set; }
       public string[] SentenceArr { get; set; }
 
-      public UserInput(string word, string sentence)
+      public UserInput(string userWord, string sentence)
       {
-        Word = word;
+        UserWord = UserWord;
         Sentence = sentence;
       }
 
-        public string WordToUpperCase(string Word)
+        public string WordToUpperCase(string UserWord)
         {
-        string upperWord = Word.ToUpper();
+        string upperWord = UserWord.ToUpper();
         return upperWord;
         }
 
@@ -31,16 +31,25 @@ namespace WordCounter.Models
         return upperSentence;
         }
 
-        public int SentenceToArr(string Sentence)
+        public int SentenceToArr()
         {
         string[] SentenceArr = Sentence.Split(' ');
+        // return SentenceArr.Length;
+          return SentenceArr.Length;
+        }
 
-        // foreach (string word in Sentence)
-        // {
-        //     SentenceArr.Add(word);
-        //     System.Console.WriteLine($"<{word}>");
-        // }
-        return SentenceArr.Length;
+        public int CompareWord()
+        {
+          int userWordCount = 0;
+          string[] SentenceArr = Sentence.Split(' ');
+          foreach (string word in SentenceArr)
+          {
+            if (word == UserWord)
+            {
+            userWordCount += 1;
+            }
+          }
+          return userWordCount;
         }
 
 
