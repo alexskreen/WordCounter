@@ -38,9 +38,18 @@
         [TestMethod]
         public void CompareWord_ComparePartialWordToFullWord_ReturnZero()
         {
-            UserInput testUserInput = new UserInput("test", "testing");
+            UserInput testUserInput = new UserInput("cat", "catalina");
             testUserInput.SentenceToArr();
-            Assert.AreEqual(2, testUserInput.CompareWord("cat"));
+            Assert.AreEqual(0, testUserInput.CompareWord("cat"));
         }
+
+        // [TestMethod]
+        // public void CompareWord_ComparePartialWordToFullWord_ReturnZero()
+        // {
+        //     UserInput testUserInput = new UserInput("cat", "testing");
+        //     testUserInput.SentenceToUpperCase();
+        //     testUserInput.SentenceToArr();
+        //     Assert.AreEqual(2, testUserInput.CompareWord("cat"));
+        // }
     } 
  }
