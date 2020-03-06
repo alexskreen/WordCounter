@@ -7,11 +7,18 @@ namespace WordCounter.Test
   public class WordCounterTests
   {
     [TestMethod]
-    public void CheckForNumbers_TestWord_ReturnWord()
+    public void CheckForNumbers_TestNumber_ReturnWord()
     {
       UserInput testUserInput = new UserInput("1", "cats are awesome");
-      Assert.AreEqual("CAT", testUserInput.CheckForNumbers());
+      Assert.AreEqual("Please enter a valid word", testUserInput.CheckForNumbers());
     }
+
+    // [TestMethod]
+    // public void CheckForNumbers_TestWordWithNumbers_ReturnWord()
+    // {
+    //   UserInput testUserInput = new UserInput("cat1", "cats are awesome");
+    //   Assert.AreEqual(3, testUserInput.CheckForNumbers());
+    // }
     
     [TestMethod]
     public void WordToUpperCase_TestCat_ReturnCAT()
