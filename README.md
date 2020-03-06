@@ -1,6 +1,6 @@
 # _Word Counter!_
 
-#### _A fun C# program that checks how frequently the word appears in the sentence._
+#### _A fun C# program that checks how frequently a word appears in the sentence._
 
 #### By _**Alex Skreen**_
 
