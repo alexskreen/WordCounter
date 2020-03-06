@@ -24,7 +24,7 @@
         public void SentenceToArr_ArrayifySentence_ReturnLength()
         {
             UserInput testUserInput = new UserInput("cat", "cats are awesome");
-            Assert.AreEqual(10, testUserInput.SentenceToArr("cats are awesome"));
+            Assert.AreEqual(3, testUserInput.SentenceToArr("cats are awesome"));
 
         }
     } 
