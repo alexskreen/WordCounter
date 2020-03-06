@@ -34,5 +34,13 @@
             testUserInput.SentenceToArr();
             Assert.AreEqual(2, testUserInput.CompareWord("cat"));
         }
+
+        [TestMethod]
+        public void CompareWord_ComparePartialWordToFullWord_ReturnZero()
+        {
+            UserInput testUserInput = new UserInput("test", "testing");
+            testUserInput.SentenceToArr();
+            Assert.AreEqual(2, testUserInput.CompareWord("cat"));
+        }
     } 
  }
