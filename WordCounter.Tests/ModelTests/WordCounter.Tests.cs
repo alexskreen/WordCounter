@@ -48,7 +48,17 @@
         {
             UserInput testUserInput = new UserInput("cat", "the catalina cat catastrophe was catatonic");
             testUserInput.SentenceToArr();
-            Assert.AreEqual(4, testUserInput.CompareWord("cat"));
+            Assert.AreEqual(1, testUserInput.CompareWord("cat"));
         }
+
+        // [TestMethod]
+        // public void CompareWord_ComparePartialWordToFullWordInSentence_ReturnZero()
+        // {
+        //     UserInput testUserInput = new UserInput("cat", "the catalina CaT catastrophe was catatonic. Luckily my CAt was ok");
+        //     testUserInput.WordToUpperCase();
+        //     testUserInput.SentenceToUpperCase();
+        //     testUserInput.SentenceToArr();
+        //     Assert.AreEqual(1, testUserInput.CompareWord("cat"));
+        // }
     } 
  }
