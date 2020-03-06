@@ -58,7 +58,7 @@
             testUserInput.WordToUpperCase();
             testUserInput.SentenceToUpperCase();
             testUserInput.SentenceToArr();
-            Assert.AreEqual(1, testUserInput.CompareWord());
+            Assert.AreEqual(2, testUserInput.CompareWord());
         }
     } 
  }
