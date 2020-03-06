@@ -13,12 +13,12 @@ namespace WordCounter.Test
       Assert.AreEqual("Please enter a valid word", testUserInput.CheckForNumbers());
     }
 
-    // [TestMethod]
-    // public void CheckForNumbers_TestWordWithNumbers_ReturnWord()
-    // {
-    //   UserInput testUserInput = new UserInput("cat1", "cats are awesome");
-    //   Assert.AreEqual(3, testUserInput.CheckForNumbers());
-    // }
+    [TestMethod]
+    public void CheckForNumbers_TestWordWithNumbers_ReturnWord()
+    {
+      UserInput testUserInput = new UserInput("cat1", "cats are awesome");
+      Assert.AreEqual(3, testUserInput.CheckForNumbers());
+    }
     
     [TestMethod]
     public void WordToUpperCase_TestCat_ReturnCAT()
