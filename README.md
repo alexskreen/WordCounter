@@ -67,6 +67,7 @@ _To view/edit the source code of this application, open the contents of the camp
 Behavoir | Input | Output
 :---------:|:------:|:------:
 | The program will take in a word from the user | "Cat" | "Cat" |
+| The program will throw and error if the user enters a number within their word | "Cat1" | "Please enter a valid word" |
 | The program will take in a sentence from the user | "Cats are awesome. I have two cats. My first cat is named Charlie. My second cat is named Tina" | "Cats are awesome. I have two cats. My first cat is named Charlie. My second cat is named Tina" |
 | The program will convert user inputs to all lower case characters | "Cat3!" | "cat" |
 | The program will search for any words in the user inputted sentence that are the same length as the user inputted word | "Cat", "Cats are awesome. I have two cats. My first cat is named Charlie. My second cat is named Tina" | "cat" | 4 words with the same length as the user inputted word |

@@ -19,6 +19,18 @@ namespace WordCounter.Models
         Sentence = sentence;
       }
 
+        public string CheckForNumbers()
+        {
+        if (UserWord.Contains("1") || UserWord.Contains("2") || UserWord.Contains("3") || UserWord.Contains("4") || UserWord.Contains("5") || UserWord.Contains("6") || UserWord.Contains("7") || UserWord.Contains("8") || UserWord.Contains("9") || UserWord.Contains("0"))
+        {
+        return "Please enter a valid word";
+        }
+        else
+        {
+        return UserWord;
+        }
+        }
+        
         public string WordToUpperCase()
         {
         string upperWord = UserWord.ToUpper();
