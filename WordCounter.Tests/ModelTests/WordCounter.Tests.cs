@@ -31,7 +31,8 @@
         public void CompareWord_CompareUserWordToString_ReturnOccurence()
         {
             UserInput testUserInput = new UserInput("cat", "my cat is the best cat");
-            Assert.AreEqual(2, testUserInput.SentenceToArr());
+            testUserInput.SentenceToArr();
+            Assert.AreEqual(2, testUserInput.CompareWord("cat"));
         }
     } 
  }

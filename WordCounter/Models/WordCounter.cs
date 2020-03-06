@@ -38,7 +38,7 @@ namespace WordCounter.Models
           return SentenceArr.Length;
         }
 
-        public int CompareWord()
+        public int CompareWord(string UserWord)
         {
           int userWordCount = 0;
           string[] SentenceArr = Sentence.Split(' ');
