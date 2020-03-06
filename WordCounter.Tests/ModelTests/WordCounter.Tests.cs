@@ -10,7 +10,7 @@
         public void WordToUpperCase_TestCat_ReturnCAT()
         {
             UserInput testUserInput = new UserInput("cat", "cats are awesome");
-            Assert.AreEqual("CAT", testUserInput.WordToUpperCase("cat"));
+            Assert.AreEqual("CAT", testUserInput.WordToUpperCase());
         }
 
         [TestMethod]
@@ -32,33 +32,33 @@
         {
             UserInput testUserInput = new UserInput("cat", "my cat is the best cat");
             testUserInput.SentenceToArr();
-            Assert.AreEqual(2, testUserInput.CompareWord("cat"));
+            Assert.AreEqual(2, testUserInput.CompareWord());
         }
 
         [TestMethod]
-        public void CompareWord_ComparePartialWordToFullWord_ReturnZero()
+        public void CompareWord_ComparePartialWordToFullWord_ReturnOccurence()
         {
             UserInput testUserInput = new UserInput("cat", "catalina");
             testUserInput.SentenceToArr();
-            Assert.AreEqual(0, testUserInput.CompareWord("cat"));
+            Assert.AreEqual(0, testUserInput.CompareWord());
         }
 
         [TestMethod]
-        public void CompareWord_ComparePartialWordToFullWordInSentence_ReturnZero()
+        public void CompareWord_ComparePartialWordToFullWordInSentence_ReturnOccurence()
         {
             UserInput testUserInput = new UserInput("cat", "the catalina cat catastrophe was catatonic");
             testUserInput.SentenceToArr();
-            Assert.AreEqual(1, testUserInput.CompareWord("cat"));
+            Assert.AreEqual(1, testUserInput.CompareWord());
         }
 
-        // [TestMethod]
-        // public void CompareWord_ComparePartialWordToFullWordInSentence_ReturnZero()
-        // {
-        //     UserInput testUserInput = new UserInput("cat", "the catalina CaT catastrophe was catatonic. Luckily my CAt was ok");
-        //     testUserInput.WordToUpperCase();
-        //     testUserInput.SentenceToUpperCase();
-        //     testUserInput.SentenceToArr();
-        //     Assert.AreEqual(1, testUserInput.CompareWord("cat"));
-        // }
+        [TestMethod]
+        public void CompareWord_CompareSentenceWithMixedCharactersAndPartialWords_ReturnOccurence()
+        {
+            UserInput testUserInput = new UserInput("cat", "the catalina CaT catastrophe was catatonic. Luckily my CAT was ok");
+            testUserInput.WordToUpperCase();
+            testUserInput.SentenceToUpperCase();
+            testUserInput.SentenceToArr();
+            Assert.AreEqual(1, testUserInput.CompareWord());
+        }
     } 
  }

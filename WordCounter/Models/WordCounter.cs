@@ -15,30 +15,31 @@ namespace WordCounter.Models
 
       public UserInput(string userWord, string sentence)
       {
-        UserWord = UserWord;
+        UserWord = userWord;
         Sentence = sentence;
       }
 
-        public string WordToUpperCase(string UserWord)
+        public string WordToUpperCase()
         {
         string upperWord = UserWord.ToUpper();
+        UserWord = upperWord;
         return upperWord;
         }
 
         public string SentenceToUpperCase()
         {
         string upperSentence = Sentence.ToUpper();
+        Sentence = upperSentence;
         return upperSentence;
         }
 
         public int SentenceToArr()
         {
         string[] SentenceArr = Sentence.Split(' ');
-        // return SentenceArr.Length;
           return SentenceArr.Length;
         }
 
-        public int CompareWord(string UserWord)
+        public int CompareWord()
         {
           int userWordCount = 0;
           string[] SentenceArr = Sentence.Split(' ');
