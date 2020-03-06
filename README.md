@@ -68,32 +68,18 @@ Behavoir | Input | Output
 :---------:|:------:|:------:
 | The program will take in a word from the user | "Cat" | "Cat" |
 | The program will take in a sentence from the user | "Cats are awesome. I have two cats. My first cat is named Charlie. My second cat is named Tina" | "Cats are awesome. I have two cats. My first cat is named Charlie. My second cat is named Tina" |
-| The program will remove all special characters | "Cat!" | "Cat" |
-| The program will remove all numbers | "Cat3!" | "Cat" |
 | The program will convert user inputs to all lower case characters | "Cat3!" | "cat" |
 | The program will search for any words in the user inputted sentence that are the same length as the user inputted word | "Cat", "Cats are awesome. I have two cats. My first cat is named Charlie. My second cat is named Tina" | "cat" | 4 words with the same length as the user inputted word |
 | The program will check those length matched words for any that match the user inputted word exactly | "Cat", "Cats are awesome. I have two cats. My first cat is named Charlie. My second cat is named Tina" | "cat" | 2 words match the user inputted word |
-
-
-
-
-
-
 
 ## Support 
 
 _The software is provided as is. If you experience an issue please reach out to me using the contact information provided._
 
-
 ## Built With
-
-
-
 
 * [C#](https://docs.microsoft.com/en-us/dotnet/csharp/)
 * [.NET](https://dotnet.microsoft.com/)
-
-
 
 ### License
 
