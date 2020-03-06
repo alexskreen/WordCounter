@@ -19,7 +19,7 @@ namespace WordCounter.Test
       UserInput testUserInput = new UserInput("cat1", "cats are awesome");
       Assert.AreEqual("Please enter a valid word", testUserInput.CheckForNumbers());
     }
-    
+
     [TestMethod]
     public void WordToUpperCase_TestCat_ReturnCAT()
     {
