@@ -10,7 +10,7 @@
         public void ToUpperCase_TestCat_ReturnCAT()
         {
             UserInput testUserInput = new UserInput("cat", "cats are awesome");
-            Assert.AreEqual("Cat", testUserInput.ToUpperCase("cat"));
+            Assert.AreEqual("CAT", testUserInput.ToUpperCase("cat"));
 
         }
     } 
