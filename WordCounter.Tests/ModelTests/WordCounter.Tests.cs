@@ -17,7 +17,7 @@ namespace WordCounter.Test
     public void CheckForNumbers_TestWordWithNumbers_ReturnWord()
     {
       UserInput testUserInput = new UserInput("cat1", "cats are awesome");
-      Assert.AreEqual(3, testUserInput.CheckForNumbers());
+      Assert.AreEqual("Please enter a valid word", testUserInput.CheckForNumbers());
     }
     
     [TestMethod]
