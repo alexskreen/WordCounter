@@ -8,7 +8,8 @@ namespace Wordcounter.Program
    public class Program
     {
         public static void Main()
-        {   
+        {
+            Console.ForegroundColor = ConsoleColor.Green;
             Program.TypeLine("Welcome to WordCounter!");
             Console.Write(Environment.NewLine);
             Program.TypeLine("This program will allow you to enter a word, enter a sentence, then it will tell you how many times your word occurs in the sentence!");
@@ -17,6 +18,7 @@ namespace Wordcounter.Program
             Console.Write(Environment.NewLine);
             Program.TypeLine("Please enter a word: ");
             Console.Write(Environment.NewLine);
+            Console.Clear();
             string userInputWord = Console.ReadLine();
             Program.TypeLine("Please enter a sentence: ");
             Console.Write(Environment.NewLine);
