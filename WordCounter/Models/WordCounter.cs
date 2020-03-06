@@ -25,7 +25,7 @@ namespace WordCounter.Models
         return upperWord;
         }
 
-        public string SentenceToUpperCase(string Sentence)
+        public string SentenceToUpperCase()
         {
         string upperSentence = Sentence.ToUpper();
         return upperSentence;

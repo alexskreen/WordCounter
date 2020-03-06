@@ -17,7 +17,7 @@
         public void SentenceToUpperCase_TestCat_ReturnCAT()
         {
             UserInput testUserInput = new UserInput("cat", "cats are awesome");
-            Assert.AreEqual("CATS ARE AWESOME", testUserInput.SentenceToUpperCase("cats are awesome"));
+            Assert.AreEqual("CATS ARE AWESOME", testUserInput.SentenceToUpperCase());
         }
 
         [TestMethod]
@@ -43,13 +43,12 @@
             Assert.AreEqual(0, testUserInput.CompareWord("cat"));
         }
 
-        // [TestMethod]
-        // public void CompareWord_ComparePartialWordToFullWord_ReturnZero()
-        // {
-        //     UserInput testUserInput = new UserInput("cat", "testing");
-        //     testUserInput.SentenceToUpperCase();
-        //     testUserInput.SentenceToArr();
-        //     Assert.AreEqual(2, testUserInput.CompareWord("cat"));
-        // }
+        [TestMethod]
+        public void CompareWord_ComparePartialWordToFullWordInSentence_ReturnZero()
+        {
+            UserInput testUserInput = new UserInput("cat", "the catalina cat catastrophe was catatonic");
+            testUserInput.SentenceToArr();
+            Assert.AreEqual(4, testUserInput.CompareWord("cat"));
+        }
     } 
  }
