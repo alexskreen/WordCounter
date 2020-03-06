@@ -7,10 +7,18 @@
     public class WordCounterTests
     {
         [TestMethod]
-        public void ToUpperCase_TestCat_ReturnCAT()
+        public void WordToUpperCase_TestCat_ReturnCAT()
         {
             UserInput testUserInput = new UserInput("cat", "cats are awesome");
-            Assert.AreEqual("CAT", testUserInput.ToUpperCase("cat"));
+            Assert.AreEqual("CAT", testUserInput.WordToUpperCase("cat"));
+
+        }
+
+        [TestMethod]
+        public void SentenceToUpperCase_TestCat_ReturnCAT()
+        {
+            UserInput testUserInput = new UserInput("cat", "cats are awesome");
+            Assert.AreEqual("CATS", testUserInput.SentenceToUpperCase("cats are awesome"));
 
         }
     } 

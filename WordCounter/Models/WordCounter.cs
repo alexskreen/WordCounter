@@ -18,10 +18,20 @@ namespace WordCounter.Models
         Sentence = Sentence;
       }
 
-        public string ToUpperCase(string Word)
+        public string WordToUpperCase(string Word)
         {
         string upperWord = Word.ToUpper();
         return upperWord;
         }
+
+        public string SentenceToUpperCase(string Sentence)
+        {
+        string upperSentence = Sentence.ToUpper();
+        return upperSentence;
+        }
+
+
+
+
       }
     }
