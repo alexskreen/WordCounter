@@ -15,10 +15,10 @@ namespace Wordcounter.Program
             Console.Write(Environment.NewLine);
             Program.TypeLine("Isn't that exciting?!");
             Console.Write(Environment.NewLine);
-            Console.WriteLine("Please enter a word: ");
+            Program.TypeLine("Please enter a word: ");
             Console.Write(Environment.NewLine);
             string userInputWord = Console.ReadLine();
-            Console.WriteLine("Please enter a sentence: ");
+            Program.TypeLine("Please enter a sentence: ");
             Console.Write(Environment.NewLine);
             string userInputSentence = Console.ReadLine();
             UserInput NewUserInput = new UserInput(userInputWord, userInputSentence);
@@ -26,16 +26,9 @@ namespace Wordcounter.Program
             NewUserInput.WordToUpperCase();
             NewUserInput.SentenceToUpperCase();
             NewUserInput.SentenceToArr();
-            Console.WriteLine(NewUserInput.CompareWord());
-            // Program.TypeLine(NewUserInput.CompareWord());
+            Program.TypeLine("The word " + NewUserInput.UserWord + " occurs " + NewUserInput.CompareWord() + " time(s) in this sentence!");
 
-
-
-
-
-      Program.TypeLine(NewUserInput.UserWord);
-            
-
+      Console.WriteLine(NewUserInput.CompareWord());
         }
 
         public static void TypeLine(string input)
