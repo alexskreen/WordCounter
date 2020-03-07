@@ -46,8 +46,8 @@ _If .NET and C# are not installed on your computer already, then install using t
 
 _Clone this repository via Terminal using the following commands:_
 * ``$ cd desktop``
-* ``$ git clone https://github.com/alexskreen/Bakery``
-* ``$ cd bakery``
+* ``$ git clone https://github.com/alexskreen/WordCounter``
+* ``$ cd WordCounter.Solution``
 
 _Confirm that you have navigated to the Bakery directory (e.g., by entering the command_ ``pwd`` in terminal). 
 
@@ -67,11 +67,12 @@ _To view/edit the source code of this application, open the contents of the camp
 Behavoir | Input | Output
 :---------:|:------:|:------:
 | The program will take in a word from the user | "Cat" | "Cat" |
-| The program will throw and error if the user enters a number within their word | "Cat1" | "Please enter a valid word" |
+| The program will throw an error if the user enters a number within their word | "Cat1" | "Please enter a valid word" |
 | The program will take in a sentence from the user | "Cats are awesome. I have two cats. My first cat is named Charlie. My second cat is named Tina" | "Cats are awesome. I have two cats. My first cat is named Charlie. My second cat is named Tina" |
 | The program will convert user inputs to all lower case characters | "Cat3!" | "cat" |
 | The program will search for any words in the user inputted sentence that are the same length as the user inputted word | "Cat", "Cats are awesome. I have two cats. My first cat is named Charlie. My second cat is named Tina" | "cat" | 4 words with the same length as the user inputted word |
 | The program will check those length matched words for any that match the user inputted word exactly | "Cat", "Cats are awesome. I have two cats. My first cat is named Charlie. My second cat is named Tina" | "cat" | 2 words match the user inputted word |
+| The program will tell the user how many times their word occured in the sentence they inputted | "Cat", "Cats are awesome. I have two cats. My first cat is named Charlie. My second cat is named Tina" | "The word  car occurs 2 time(s) in this sentence!" |
 
 ## Support 
 
