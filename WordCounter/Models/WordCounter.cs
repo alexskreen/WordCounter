@@ -30,18 +30,18 @@ namespace WordCounter.Models
       }
     }
 
-    public string WordToUpperCase()
+    public string WordToLowerCase()
     {
-      string upperWord = UserWord.ToUpper();
-      UserWord = upperWord;
-      return upperWord;
+      string lowerWord = UserWord.ToLower();
+      UserWord = lowerWord;
+      return lowerWord;
     }
 
-    public string SentenceToUpperCase()
+    public string SentenceToLowerCase()
     {
-      string upperSentence = Sentence.ToUpper();
-      Sentence = upperSentence;
-      return upperSentence;
+      string lowerSentence = Sentence.ToLower();
+      Sentence = lowerSentence;
+      return lowerSentence;
     }
 
     public int SentenceToArr()

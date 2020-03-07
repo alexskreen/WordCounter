@@ -21,17 +21,17 @@ namespace WordCounter.Test
     }
 
     [TestMethod]
-    public void WordToUpperCase_TestCat_ReturnCAT()
+    public void WordToLowerCase_TestCat_ReturnCAT()
     {
       UserInput testUserInput = new UserInput("cat", "cats are awesome");
-      Assert.AreEqual("CAT", testUserInput.WordToUpperCase());
+      Assert.AreEqual("cat", testUserInput.WordToLowerCase());
     }
 
     [TestMethod]
-    public void SentenceToUpperCase_TestCat_ReturnCAT()
+    public void SentenceToLowerCase_TestCat_ReturnCAT()
     {
       UserInput testUserInput = new UserInput("cat", "cats are awesome");
-      Assert.AreEqual("CATS ARE AWESOME", testUserInput.SentenceToUpperCase());
+      Assert.AreEqual("cats are awesome", testUserInput.SentenceToLowerCase());
     }
 
     [TestMethod]
@@ -69,8 +69,8 @@ namespace WordCounter.Test
     public void CompareWord_CompareSentenceWithMixedCharactersAndPartialWords_ReturnOccurence()
     {
       UserInput testUserInput = new UserInput("cat", "the catalina CaT catastrophe was catatonic. Luckily my CAT was ok");
-      testUserInput.WordToUpperCase();
-      testUserInput.SentenceToUpperCase();
+      testUserInput.WordToLowerCase();
+      testUserInput.SentenceToLowerCase();
       testUserInput.SentenceToArr();
       Assert.AreEqual(2, testUserInput.CompareWord());
     }
