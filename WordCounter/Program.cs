@@ -25,15 +25,19 @@ namespace Wordcounter.Program
       Program.TypeLine("Please enter a sentence: ");
       Console.Write(Environment.NewLine);
       string userInputSentence = Console.ReadLine();
-      UserInput NewUserInput = new UserInput(userInputWord, userInputSentence);
+      UserInput newUserInput = new UserInput(userInputWord, userInputSentence);
       Console.Clear();
-      NewUserInput.CheckForNumbers();
-      NewUserInput.WordToLowerCase();
-      NewUserInput.SentenceToLowerCase();
-      NewUserInput.SentenceToArr();
-      Program.TypeLine("The word " + NewUserInput.UserWord + " occurs " + NewUserInput.CompareWord() + " time(s) in this sentence!");
-
-      Console.WriteLine(NewUserInput.CompareWord());
+      newUserInput.CheckForNumbers();
+      newUserInput.WordToLowerCase();
+      newUserInput.SentenceToLowerCase();
+      if (newUserInput.CompareWord() == 0)
+      {
+      Program.TypeLine("Your word doesn't occur in the sentence. Please try again!");
+      }
+      else
+      {
+      Program.TypeLine("The word " + newUserInput.UserWord + " occurs " + newUserInput.CompareWord() + " time(s) in this sentence!");
+      }
     }
 
     public static void TypeLine(string input)

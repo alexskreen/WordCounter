@@ -9,9 +9,6 @@ namespace WordCounter.Models
   {
     public string UserWord { get; set; }
     public string Sentence { get; set; }
-    public int occurance { get; set; }
-    public string[] SentenceArr { get; set; }
-
     public UserInput(string userWord, string sentence)
     {
       UserWord = userWord;
@@ -42,12 +39,6 @@ namespace WordCounter.Models
       string lowerSentence = Sentence.ToLower();
       Sentence = lowerSentence;
       return lowerSentence;
-    }
-
-    public int SentenceToArr()
-    {
-      string[] SentenceArr = Sentence.Split(' ');
-      return SentenceArr.Length;
     }
 
     public int CompareWord()
