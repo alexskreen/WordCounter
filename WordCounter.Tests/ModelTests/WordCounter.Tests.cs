@@ -35,17 +35,9 @@ namespace WordCounter.Test
     }
 
     [TestMethod]
-    public void SentenceToArr_ArrayifySentence_ReturnLength()
-    {
-      UserInput testUserInput = new UserInput("cat", "cats are awesome");
-      Assert.AreEqual(3, testUserInput.SentenceToArr());
-    }
-
-    [TestMethod]
     public void CompareWord_CompareUserWordToString_ReturnOccurence()
     {
       UserInput testUserInput = new UserInput("cat", "my cat is the best cat");
-      testUserInput.SentenceToArr();
       Assert.AreEqual(2, testUserInput.CompareWord());
     }
 
@@ -53,7 +45,6 @@ namespace WordCounter.Test
     public void CompareWord_ComparePartialWordToFullWord_ReturnOccurence()
     {
       UserInput testUserInput = new UserInput("cat", "catalina");
-      testUserInput.SentenceToArr();
       Assert.AreEqual(0, testUserInput.CompareWord());
     }
 
@@ -61,7 +52,6 @@ namespace WordCounter.Test
     public void CompareWord_ComparePartialWordToFullWordInSentence_ReturnOccurence()
     {
       UserInput testUserInput = new UserInput("cat", "the catalina cat catastrophe was catatonic");
-      testUserInput.SentenceToArr();
       Assert.AreEqual(1, testUserInput.CompareWord());
     }
 
@@ -71,7 +61,6 @@ namespace WordCounter.Test
       UserInput testUserInput = new UserInput("cat", "the catalina CaT catastrophe was catatonic. Luckily my CAT was ok");
       testUserInput.WordToLowerCase();
       testUserInput.SentenceToLowerCase();
-      testUserInput.SentenceToArr();
       Assert.AreEqual(2, testUserInput.CompareWord());
     }
   }
